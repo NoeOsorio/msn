@@ -1,0 +1,7 @@
+{
+  "name": "msn",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
