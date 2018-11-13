@@ -4,16 +4,10 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Home
+      Settings
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content padding>
-  <ul>
-    <li *ngFor="let item of users | async">
-      {{ item.name }}
-    </li>
-  </ul>
-  {{ (user | async)?.name }}
+
 </ion-content>
