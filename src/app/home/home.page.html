@@ -10,10 +10,18 @@
 </ion-header>
 
 <ion-content padding>
+  <div>
+    
+  </div>
   <ul>
     <li *ngFor="let item of users | async">
-      {{ item.name }}
+      {{ item.nick }}
     </li>
   </ul>
   {{ (user | async)?.name }}
+  {{ (authUser | async)?.email }}
+  {{ (email | async) }}
+
+  <ion-button expand="full" (click)="navTo('login')">Login</ion-button>
+  
 </ion-content>

@@ -5,5 +5,37 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
+    <ion-item *ngIf="operation === 'register'">
+      <ion-label fixed>Nick</ion-label>
+      <ion-input type="text" [(ngModel)]="nick"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Recordarme</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <span *ngIf="operation === 'register'">Ya tienes cuenta? <a (click)="operation = 'login'"><b>Click Aquí</b></a></span>
+    <span *ngIf="operation === 'login'">Aun no tienes cuenta? <a (click)="operation = 'register'"><b>Click Aquí</b></a></span>
+    <hr />
+    <ion-button *ngIf="operation === 'login'" ion-button  (click)="login()" block>Ingresar</ion-button>
+    <ion-button *ngIf="operation === 'register'" ion-button (click)="register()" block>Registrarse</ion-button>
+
+  </div>
+  <ion-button expand="full" (click)="logout()">Logout</ion-button>
+  <ion-label fixed>Name</ion-label>
+  <ion-input type="text" [(ngModel)]="fictionUser"></ion-input>
+
+  <ion-button (click)="insertUser()">Agregar Usuario</ion-button>
+
 
 </ion-content>

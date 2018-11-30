@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'conversation', loadChildren: './conversation/conversation.module#ConversationPageModule' },
   { path: 'configuration', loadChildren: './configuration/configuration.module#ConfigurationPageModule' },
-  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' }
+  { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule' },
+  { path: 'google-login', loadChildren: './google-login/google-login.module#GoogleLoginPageModule' }
 ];
 
 @NgModule({
